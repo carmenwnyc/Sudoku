@@ -14,7 +14,6 @@ from statistics import mean
 ROW = "ABCDEFGHI"
 COL = "123456789"
 
-
 def print_board(board):
     """Helper function to print board in a square."""
     print("-----------------")
@@ -34,7 +33,6 @@ def board_to_string(board):
 
 def backtracking(board):
     """Takes a board and returns solved board."""
-    # TODO: implement this
 
     # initialize domain for empty spaces (value == 0) on the 9x9 grid
     # initial domain values for all variables is a list of 1-9
@@ -79,7 +77,8 @@ def backtrack_helper(board, domain):
                 if result != False:
                     return result
                 else:
-                    board[row + col] = 0 # reverse the assignment since backtrack fails at some point down the road
+                    # reverse the assignment since backtrack fails at some point down the road
+                    board[row + col] = 0 
     return False
 
 def isComplete(board):
@@ -88,7 +87,6 @@ def isComplete(board):
         if value == 0:
             return False
     return True
-
 
 def isConsistent(val, row, col, board):
     """check whether one val of a variable is consistent with the remaining board"""
@@ -196,15 +194,12 @@ def mrv(board, domain):
     """ Minimum remaining variables heuristics to pick the next variable for backtracking """
     var=''
     num_values = 10
-
     for key, value in domain.items():
         if len(value) < num_values and board[key] == 0:
             # must select from unassigned variables
             var = key
             num_values = len(value)
-
-    return var
-                
+    return var             
 
 if __name__ == '__main__':
     #  Read boards from source.
@@ -234,15 +229,15 @@ if __name__ == '__main__':
         board = { ROW[r] + COL[c]: int(line[9*r+c])
                   for r in range(9) for c in range(9)}
 
-        # Print starting board. TODO: Comment this out when timing runs.
-        #print_board(board)
+        # Print starting board.
+        # print_board(board)
 
         # Solve with backtracking
         solved_board = backtracking(board)
         # finishing time after solving a board
         end_time = time.time()
         runtime_stat.append(end_time - start_time)
-        # Print solved board. TODO: Comment this out when timing runs.
+        # Print solved board.
         # print_board(solved_board)
 
         # Write board to file

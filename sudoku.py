@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 #coding:utf-8
+"""
+Author: Carmen Wu
+"""
 
 """
 Each sudoku board is represented as a dictionary with string keys and

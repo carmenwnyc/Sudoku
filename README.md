@@ -15,7 +15,7 @@ python3 sudoku.py input.txt
 * An input string is made up of 81 numbers that represent a 9x9 grid Sudoku board. For example:<br/>
 003020600900305001001806400008102900700000008006708200002609500800203009005010300<br/>
 
-Which is equivalent to:<br/>
+Which is equivalent to the 9x9 Grid below: <br/>
 <br/>
 003020600<br/>
 900305001<br/> 

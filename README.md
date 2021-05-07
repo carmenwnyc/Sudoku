@@ -7,8 +7,9 @@ The command to run the program:<br/>
 $python3 sudoku.py <input string>
 
 An input string is made up of 81 numbers that represent a 9x9 grid Sudoku board. For example:<br/>
-003020600900305001001806400008102900700000008006708200002609500800203009005010300
+003020600900305001001806400008102900700000008006708200002609500800203009005010300<br/>
 Which is equivalent to:<br/>
+<br/>
 003020600<br/>
 900305001<br/> 
 001806400<br/>

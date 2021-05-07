@@ -4,7 +4,7 @@ The objective of Sudoku is to fill a 9x9 grid with the numbers 1-9 so that each 
 
 The program takes an input string and output a string that represents a finished Sudoku board.<br/>
 The command to run the program:<br/>
-$python3 sudoku.py <input string>
+$ python3 sudoku.py <input string>
 
 An input string is made up of 81 numbers that represent a 9x9 grid Sudoku board. For example:<br/>
 003020600900305001001806400008102900700000008006708200002609500800203009005010300<br/>
